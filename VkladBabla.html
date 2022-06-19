@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	alert("Расчет вклада с учётом сложного процента. ")
+
+	var Deposit = prompt("Сумма вклада: ");
+	var Year = prompt("Количество лет: ") ;
+	var Prosent = prompt("Ежегодный процент: ") / 100 ;
+
+	document.write("Ваш вклад: " + Deposit + "рублей. <br>")
+
+	for(var evereYear = 1; evereYear < Year; evereYear++){
+		
+		document.write(evereYear + " год: " + parseInt(Deposit * (1 + Prosent) ** evereYear) + " рублей  <br> ")
+	}
+
+	document.write("Накопления за " + (evereYear = Year) + " лет с учётом " + (Prosent * 100) + "% составят: " + parseInt(Deposit * (1 + Prosent) ** Year) + " рублей. <br> ");
+
+	document.write("Капитальный красавчик!!! <br> ");
+
+</script>
